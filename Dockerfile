@@ -11,6 +11,7 @@ RUN pip install \
   opencv-python==3.3.0.10
 
 COPY startup.sh /
+RUN chmod 777 /startup.sh
 RUN python -c "exec(\"import imageio\\nimageio.plugins.ffmpeg.download()\")"
 
 
