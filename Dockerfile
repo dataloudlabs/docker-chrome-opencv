@@ -10,6 +10,9 @@ RUN pip install \
   imageio\
   opencv-python==3.3.0.10
 
-CMD "python -m imageio"
+COPY bootstrap.sh /
+COPY imageio.py /
+WORKDIR /
+RUN python -m imageio
 
-
+CMD '/startup.sh'
