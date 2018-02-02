@@ -9,7 +9,8 @@ RUN apt-get update && apt-get -y install python-opencv
 RUN pip install \
   imageio\
   opencv-python==3.3.0.10\
-  lycon
+  lycon\
+  bcolz
 
 COPY startup.sh /
 RUN chmod 777 /startup.sh
